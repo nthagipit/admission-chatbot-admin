@@ -1,11 +1,10 @@
 import { ChevronDown, LogOut, Settings } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 import { useAuth } from "@/hooks/useAuth";
 import { cn } from "@/utils/cn";
 import Avatar from "@/components/ui/Avatar";
-import { clearFromLS } from "@/utils/auth";
 
 export function UserMenu() {
   const { logout } = useAuth();

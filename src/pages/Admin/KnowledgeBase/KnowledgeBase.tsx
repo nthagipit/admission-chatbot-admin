@@ -14,10 +14,7 @@ import {
 } from "lucide-react";
 import type {
   DocumentQueryConfig,
-  DocumentStatus,
-  FileType,
   KnowledgeDocument,
-  SortOrder,
 } from "@/types/document.type";
 import { useEffect, useState } from "react";
 import { Link, useNavigate, useSearchParams } from "react-router-dom";

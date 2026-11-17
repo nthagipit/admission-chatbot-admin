@@ -18,7 +18,7 @@ import Card from "@/components/ui/Card";
 import EmptyState from "@/components/ui/EmptyState";
 import ErrorState from "@/components/ui/ErrorState";
 import Skeleton from "@/components/ui/Skeleton";
-import { formatDateTime, formatRelative } from "@/utils/format";
+import { formatDateTime } from "@/utils/format";
 import { useUserActions } from "../User/useUserActions";
 
 function Info({ label, children }: { label: string; children: ReactNode }) {
@@ -221,20 +221,6 @@ export default function UserDetail() {
         ) : (
           <ul className="divide-y divide-line">
             {conversationItems.map((c) => {
-              const conversation = c as typeof c & {
-                total_messages?: number;
-                totalMessages?: number;
-                updated_at?: string;
-                lastActivityAt?: string;
-                created_at?: string;
-              };
-              const messagesCount =
-                conversation.total_messages ?? conversation.totalMessages ?? 0;
-              const dateVal =
-                conversation.updated_at ??
-                conversation.lastActivityAt ??
-                conversation.created_at;
-
               return (
                 <li key={c.id}>
                   <Link

@@ -1,5 +1,4 @@
 import { ChevronLeft, ChevronRight, LogOut, X } from "lucide-react";
-import { useNavigate } from "react-router-dom";
 import { cn } from "@/utils/cn";
 import Avatar from "@/components/ui/Avatar";
 import Tooltip from "@/components/ui/ToolTip";
@@ -7,7 +6,6 @@ import { useAuth } from "@/hooks/useAuth";
 import { useMediaQuery } from "@/hooks/useMediaQuery";
 import Logo from "@/components/Logo";
 import SidebarNav from "../SidebarNav";
-import { clearFromLS } from "@/utils/auth";
 
 interface SidebarProps {
   collapsed: boolean;
@@ -28,8 +26,6 @@ export default function Sidebar({
   const isDesktop = useMediaQuery("(min-width: 1024px)");
   // Trên tablet, drawer luôn hiển thị dạng đầy đủ
   const compact = collapsed && isDesktop;
-  const { setIsAuthenticated } = useAuth();
-  // const navigate = useNavigate();
   const name = "Administrator";
 
   const { logout } = useAuth();

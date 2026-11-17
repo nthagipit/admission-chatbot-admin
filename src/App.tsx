@@ -1,4 +1,4 @@
-import { useContext, useEffect, useState } from "react";
+import { useContext, useEffect } from "react";
 import useRouteElements from "./useRouteElements";
 import { AppContext } from "./contexts/app.context";
 import { LocalStorageEventTarget } from "./utils/auth";
